@@ -11,6 +11,7 @@ CREATE TABLE personal.apicultor(
 
 CREATE TABLE habitat.colmena(
     id serial primary key,
+    nombre varchar(300),
     material varchar(200),
     tipo varchar(200),
     ancho float,
@@ -39,14 +40,14 @@ CREATE TABLE conjunto.poblacion(
     id serial primary key,
     nombre varchar(200),
     cantidad int,
-    edad int
+    edad_promedio int
 );
 
 CREATE TABLE habitat.recordatorio(
     id serial primary key,
+    nombre varchar(50), -- traslarve,
     fecha_inicio date,
     fecha_fin date,
-    tipo varchar(50), -- traslarve,
     descripcion varchar(2000),
     colmena_id int
 );

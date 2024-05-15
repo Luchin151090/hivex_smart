@@ -13,3 +13,15 @@ export const createApicultors = async (req,res) => {
         res.status(500).json({error:e.message})
     }
 }
+
+export const getApicultors = async (req,res) => {
+    try{
+        
+        const allApicultors = await modelApicultor.getApicultor()
+        console.log(allApicultors)
+        res.status(200).json(allApicultors);
+    }
+    catch(e){
+        res.status(500).json({error:e.message})
+    }
+}
